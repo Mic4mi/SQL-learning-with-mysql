@@ -35,3 +35,17 @@ SELECT
     CONCAT(author_lname,', ', author_fname) AS 'author',
     CONCAT(stock_quantity, ' in stock') AS 'quantity'
 FROM books;
+
+-- Make this happen
+SELECT Upper(Concat('my favorite author is ', author_fname, ' ', author_lname, 
+             '!')) AS 
+       'yell' 
+FROM   books 
+ORDER  BY author_lname; 
+
+-- Now distinct
+SELECT DISTINCT Upper(Concat('my favorite author is ', author_fname, ' ', 
+                      author_lname, '!')) AS 
+                'yell' 
+FROM   books 
+ORDER  BY author_lname;  

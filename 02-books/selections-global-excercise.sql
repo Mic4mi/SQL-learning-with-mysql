@@ -21,3 +21,18 @@ SELECT title,
        author_lname 
 FROM   books 
 WHERE  author_lname LIKE "% %"; 
+
+-- Find the 3 books with the lowest stock
+SELECT title, 
+       released_year, 
+       stock_quantity 
+FROM   books 
+ORDER  BY stock_quantity ASC 
+LIMIT  3; 
+
+-- Print title and author_lname, sorted by author_lname and title
+SELECT title, 
+       author_lname 
+FROM   books 
+ORDER  BY author_lname, 
+          title; 
